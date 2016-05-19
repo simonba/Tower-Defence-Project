@@ -11,4 +11,10 @@ public class Engine {
     public void act(List<Enemy> enemies) {
 
     }
+
+    private void moveEnemies(List<Enemy> enemies) {
+        for (Enemy enemy : enemies) {
+            enemy.move();
+        }
+    }
 }

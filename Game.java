@@ -18,7 +18,7 @@ public class Game {
         enemies.add(new Enemy(board, 0, 1));
         engine = new Engine();
     }
-    
+
     public boolean isTowerMatch(int x, int y) {
         for (Tower tower : towers) {
             if (tower.match(x, y)) {
