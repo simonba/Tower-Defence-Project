@@ -7,5 +7,23 @@ public class Enemy {
         health = 10;
     }
 
+    public void move() {
+
+    }
+
+    public boolean isSurvivor() {
+
+        return true;
+
+    }
+
+    public boolean isAlive() {
+
+        return true;
+
+    }
+
+
+
 
 }
