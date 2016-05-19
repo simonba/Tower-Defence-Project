@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="df6bce2d-4665-4bc1-9460-81c17eff47fc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Engine.java" afterPath="$PROJECT_DIR$/Engine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Tower.java" afterPath="$PROJECT_DIR$/Tower.java" />
     </list>
     <ignored path="Tower-Defence-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,12 +36,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Tower.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Tower.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tower.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="165">
+              <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+              <folding>
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#403#404#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Engine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Engine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,8 +99,8 @@
       <file leaf-file-name="Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2013#2014#0" expanded="true" />
@@ -128,10 +132,10 @@
       <list>
         <option value="$PROJECT_DIR$/Map.java" />
         <option value="$PROJECT_DIR$/Enemy.java" />
-        <option value="$PROJECT_DIR$/Tower.java" />
         <option value="$PROJECT_DIR$/Board.java" />
         <option value="$PROJECT_DIR$/Game.java" />
         <option value="$PROJECT_DIR$/Engine.java" />
+        <option value="$PROJECT_DIR$/Tower.java" />
       </list>
     </option>
   </component>
@@ -141,8 +145,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="42" />
-    <option name="y" value="202" />
+    <option name="x" value="55" />
+    <option name="y" value="147" />
     <option name="width" value="1260" />
     <option name="height" value="706" />
   </component>
@@ -311,15 +315,15 @@
       <option name="presentableId" value="Default" />
       <updated>1462539724952</updated>
       <workItem from="1462539726312" duration="489000" />
-      <workItem from="1463670033847" duration="5833000" />
+      <workItem from="1463670033847" duration="6377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6322000" />
+    <option name="totallyTimeSpent" value="6866000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="42" y="202" width="1260" height="706" extended-state="0" />
+    <frame x="55" y="147" width="1260" height="706" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -368,7 +372,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -411,18 +418,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2013#2014#0" expanded="true" />
@@ -433,10 +432,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Engine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        <state relative-caret-position="45">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tower.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#403#404#0" expanded="true" />
           </folding>
         </state>
       </provider>

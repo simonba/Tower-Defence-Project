@@ -12,7 +12,7 @@ public class Engine {
 
     public void act(List<Enemy> enemies) {
         moveEnemies(enemies);
-        removeSurvivors(enemies);  
+        removeSurvivors(enemies);
     }
 
     private void moveEnemies(List<Enemy> enemies) {
