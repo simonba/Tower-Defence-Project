@@ -15,15 +15,33 @@ public class Board {
         endingPoints = new ArrayList<Point>();
     }
 
-    public void addStartingPoints() {
-
+    public void addStartingPoint(int x, int y) {
+        startingPoints.add(new Point(x,y));
     }
 
-    public void addEndingPoints() {
-
+    public void addEndingPoint(int x, int y) {
+        endingPoints.add(new Point(x,y));
     }
 
-    public void isPath(int x, int y) {
+    public boolean isPath(int x, int y) {
+        return connections[x][y] != null;
+    }
 
+    public void connect(int fromX, int fromY, int toX, int toY) {
+        if(connections[fromX][fromY] == null) {
+            connections[fromX][fromY] = new ArrayList<Point>();
+        }
+        if (connections[toX][toY] == null) {
+            connections[toX][toY] = new ArrayList<Point>();
+        }
+        connections[fromX][fromY].add(new Point(toX, toY));
+    }
+
+    public List<Point> getConnections(Point location) {
+        return connections[location.x][location.y];
+    }
+
+    public List<Point> getEndingPoints() {
+        return endingPoints;
     }
 }
