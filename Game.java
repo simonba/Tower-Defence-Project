@@ -28,6 +28,7 @@ public class Game {
             engine.act(enemies);
             dump();
             engine.removeSurvivors(enemies);
+            Tower.hitTargets();
             if (enemies.isEmpty()) {
                 dump();
                 break;
