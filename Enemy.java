@@ -1,7 +1,7 @@
 import java.util.List;
 import java.awt.Point;
 import java.util.Random;
-
+   
 public class Enemy {
     private final Random random;
     private Board board;
@@ -16,7 +16,8 @@ public class Enemy {
     }
 
     public void move() {
-
+        List<Point> moves = board.getConnections(location);
+        location = moves.get(random.nextInt(moves.size()));
     }
 
     public void hit() {

@@ -19,6 +19,16 @@ public class Game {
         engine = new Engine();
     }
 
+    public void run() {
+        while (true) {
+            engine.act(enemies);
+            dump();
+            if (enemies.isEmpty()) {
+                break;
+            }
+        }
+    }
+
     public boolean isTowerMatch(int x, int y) {
         for (Tower tower : towers) {
             if (tower.match(x, y)) {
