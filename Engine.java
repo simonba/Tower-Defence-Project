@@ -14,6 +14,10 @@ public class Engine {
         Random random = new Random();
     }
 
+    /**
+     * Get how many enemies that have managed to get through the board alive.
+     * @return The int number of surviving enemies.
+     */
     public int getCounter() {
         return counter;
     }
