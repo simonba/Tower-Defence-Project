@@ -13,7 +13,7 @@ public class Engine {
 
     public void act(List<Enemy> enemies) {
         moveEnemies(enemies);
-        removeSurvivors(enemies);
+        //removeSurvivors(enemies);
     }
 
     private void moveEnemies(List<Enemy> enemies) {
@@ -22,11 +22,11 @@ public class Engine {
         }
     }
 
-    private void removeSurvivors(List<Enemy> enemies) {
+    public void removeSurvivors(List<Enemy> enemies) {
         Iterator<Enemy> enemyIterator = enemies.iterator();
         while (enemyIterator.hasNext()) {
             Enemy enemy = enemyIterator.next();
-            if (enemy.isSurvivor() || enemy.isAlive()) {
+            if (enemy.isSurvivor()) {
                 enemyIterator.remove();
             }
         }

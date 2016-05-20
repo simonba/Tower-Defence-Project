@@ -25,7 +25,7 @@ public class Enemy {
     }
 
     public boolean match(int x, int y) {
-        return location.x == x && location.y == y; 
+        return location.x == x && location.y == y;
     }
 
 

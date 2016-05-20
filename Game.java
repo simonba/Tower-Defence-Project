@@ -26,7 +26,9 @@ public class Game {
         while (true) {
             engine.act(enemies);
             dump();
+            engine.removeSurvivors(enemies);
             if (enemies.isEmpty()) {
+                dump();
                 break;
             }
         }
