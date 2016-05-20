@@ -19,8 +19,7 @@ public class Game {
         towers.add(new Tower(3, 2, 2));
         enemies.add(new Enemy(board, 0, 1));
         enemies.add(new Enemy(board, 1, 1));
-
-        dump();
+        dump(); 
     }
 
     public void run() {
@@ -28,6 +27,7 @@ public class Game {
             engine.act(enemies);
             dump();
             engine.removeSurvivors(enemies);
+            Tower.hitTargets();
             if (enemies.isEmpty()) {
                 dump();
                 break;
