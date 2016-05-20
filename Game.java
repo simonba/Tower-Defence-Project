@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class Game {
 
-    private int X_SIZE;
-    private int Y_SIZE;
+    private static final int X_SIZE = 5;
+    private static final int Y_SIZE = 5;
     private final Board board;
     private List<Tower> towers;
     private List<Enemy> enemies;
@@ -83,5 +83,6 @@ public class Game {
 
     public static void main (String[] args) {
         Game game = new Game();
+        game.run(); 
     }
 }

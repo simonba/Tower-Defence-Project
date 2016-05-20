@@ -1,7 +1,7 @@
 import java.util.List;
 import java.awt.Point;
 import java.util.Random;
-   
+
 public class Enemy {
     private final Random random;
     private Board board;
