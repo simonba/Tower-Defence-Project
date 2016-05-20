@@ -7,8 +7,15 @@ import java.util.Random;
 
 public class Engine {
 
+    int counter;
+
     public Engine() {
+        counter = 0;
         Random random = new Random();
+    }
+
+    public int getCounter() {
+        return counter;
     }
 
     public void act(List<Enemy> enemies) {
@@ -28,6 +35,7 @@ public class Engine {
             Enemy enemy = enemyIterator.next();
             if (enemy.isSurvivor()) {
                 enemyIterator.remove();
+                counter++;
             }
         }
     }
