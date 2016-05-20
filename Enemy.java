@@ -5,8 +5,8 @@ import java.util.Random;
 public class Enemy {
     private final Random random;
     private Board board;
-    Point location;
-    int health;
+    static Point location;
+    static int health;
 
     public Enemy(Board board, int x, int y) {
         random = new Random();
@@ -20,14 +20,17 @@ public class Enemy {
         location = moves.get(random.nextInt(moves.size()));
     }
 
-    public void hit() {
+    public static void hit() {
         health = health - 2;
     }
 
     public boolean match(int x, int y) {
-        return location.x == x && location.y == y;
+        if(this.location.x == x && this.location.y == y) {
+            return true;
+        }else{
+            return false;
+        }
     }
-
 
     public boolean isSurvivor() {
         for (Point endingPoint : board.getEndingPoints()) {
@@ -44,5 +47,7 @@ public class Enemy {
         }else{
             return false;
         }
+
     }
+
 }
