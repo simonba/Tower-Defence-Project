@@ -14,9 +14,12 @@ public class Game {
     public Game() {
         towers = new ArrayList<Tower>();
         enemies = new ArrayList<Enemy>();
-        board = createBoard();
-        enemies.add(new Enemy(board, 0, 1));
         engine = new Engine();
+        board = createBoard();
+        towers.add(new Tower(3, 2, 2));
+        enemies.add(new Enemy(board, 0, 1));
+        enemies.add(new Enemy(board, 1, 1));
+        dump();
     }
 
     public void run() {
@@ -50,7 +53,7 @@ public class Game {
     private Board createBoard() {
         Board newBoard = new Board(X_SIZE, Y_SIZE);
         newBoard.addStartingPoint(0,1);
-        newBoard.addStartingPoint(4,1);
+        newBoard.addEndingPoint(4,1);
         newBoard.addEndingPoint(4,3);
         newBoard.connect(0, 1, 1, 1);
         newBoard.connect(1, 1, 2, 1);
@@ -83,6 +86,6 @@ public class Game {
 
     public static void main (String[] args) {
         Game game = new Game();
-        game.run(); 
+        game.run();
     }
 }

@@ -25,17 +25,17 @@ public class Enemy {
     }
 
     public boolean match(int x, int y) {
-        if(location.x == x && location.y == y) {
-            return true;
-        }else{
-            return false;
-        }
+        return location.x == x && location.y == y; 
     }
 
+
     public boolean isSurvivor() {
-
-        return true;
-
+        for (Point endingPoint : board.getEndingPoints()) {
+            if (endingPoint.equals(location)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean isAlive() {
@@ -44,7 +44,5 @@ public class Enemy {
         }else{
             return false;
         }
-
     }
-
 }
