@@ -30,6 +30,12 @@ public class Engine {
         }
     }
 
+    /**
+     * This method removes the surviving enemies that managed to get through
+     * the board in one piece. An iterator is used to scan through the Lists and
+     * will remove enemies that are at the end Points. 
+     * @param enemies The List of enemies that will get iterated.
+     */
     public void removeSurvivors(List<Enemy> enemies) {
         Iterator<Enemy> enemyIterator = enemies.iterator();
         while (enemyIterator.hasNext()) {
