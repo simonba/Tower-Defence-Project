@@ -14,18 +14,25 @@ public class Engine {
         Random random = new Random();
     }
 
-
+    /**
+     * A counter that counts all the enemies that has managed to go
+     * through the board.
+     * @return An int number of enemies.
+     */
     public int getCounter() {
         return counter;
     }
 
+    /**
+     * Method that Game class use to move all enemies in the board.
+     * @param enemies the enemeies that are being moved.
+     */
     public void act(List<Enemy> enemies) {
         moveEnemies(enemies);
-        //removeSurvivors(enemies);
     }
 
     /**
-     * Moves all enemies that exist. 
+     * Moves all enemies that exist.
      *
      * @param enemies the enemies that are being moved.
      */
