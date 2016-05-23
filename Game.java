@@ -18,7 +18,7 @@ public class Game {
         board = createBoard();
         towers.add(new Tower(3, 2, 2));
         enemies.add(new Enemy(board, 0, 1));
-        enemies.add(new Enemy(board, 1, 1));
+      //  enemies.add(new Enemy(board, 1, 1));
         dump(); 
     }
 
@@ -32,8 +32,9 @@ public class Game {
                 dump();
                 break;
             }
-        //    if (engine.getCounter() >= 10) {
-          //      break;
+            if (engine.getCounter() >= 10) {
+                break;
+            }
         }
     }
 
