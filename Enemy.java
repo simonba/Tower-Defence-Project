@@ -28,6 +28,14 @@ public class Enemy {
         health = health - 2;
     }
 
+    /**
+     * A method that checks if a given location holds any towers
+     * or enemies. Returns true if something is found, false otherwise.
+     *
+     * @param x the position in x-direction
+     * @param y the position in y-direction
+     * @return true if there is a match and false otherwise.
+     */
     public boolean match(int x, int y) {
         if (this.location.x == x && this.location.y == y) {
             return true;
@@ -36,6 +44,12 @@ public class Enemy {
         }
     }
 
+    /**
+     * A method that checks if there are any enemies at
+     * an endingpoint. If so the method returns true.
+     *
+     * @return true if a enemy is found and false if not.
+     */
     public boolean isSurvivor() {
         for (Point endingPoint : board.getEndingPoints()) {
             if (endingPoint.equals(location)) {
