@@ -29,9 +29,9 @@ public class Enemy {
     }
 
     public boolean match(int x, int y) {
-        if(this.location.x == x && this.location.y == y) {
+        if (this.location.x == x && this.location.y == y) {
             return true;
-        }else{
+        }else {
             return false;
         }
     }
@@ -46,12 +46,6 @@ public class Enemy {
     }
 
     public boolean isAlive() {
-        if(health > 0) {
-            return true;
-        }else{
-            return false;
-        }
-
+        return health > 0;
     }
-
 }

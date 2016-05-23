@@ -32,12 +32,10 @@ public class Game {
                 dump();
                 break;
             }
-            if (engine.getCounter() >= 10) {
-                break;
-            }
+        //    if (engine.getCounter() >= 10) {
+          //      break;
         }
     }
-
 
     public boolean isTowerMatch(int x, int y) {
         for (Tower tower : towers) {

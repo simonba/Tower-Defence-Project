@@ -25,7 +25,7 @@ public class Engine {
 
     /**
      * Method that Game class use to move all enemies in the board.
-     * @param enemies the enemeies that are being moved.
+     * @param enemies the enemies that are being moved.
      */
     public void act(List<Enemy> enemies) {
         moveEnemies(enemies);
