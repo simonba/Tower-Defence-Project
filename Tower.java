@@ -16,10 +16,9 @@ public class Tower {
     }
 
     public static void hitTargets() {
-        if(location.distance(location.x, location.y, Enemy.location.x, Enemy.location.y) < 2.0) {
+        if (location.distance(location.x, location.y, Enemy.location.x, Enemy.location.y) < 2.0) {
             Enemy.hit();
         }
-
     }
-
 }
+

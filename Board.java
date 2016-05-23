@@ -8,8 +8,6 @@ public class Board {
     private List<Point>[][] connections;
     private List<Point> startingPoints;
     private List<Point> endingPoints;
-    private int Y_SIZE;
-    private int X_SIZE;
 
     public Board(int xSize, int ySize) {
         connections = new ArrayList[xSize][ySize];
