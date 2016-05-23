@@ -15,6 +15,10 @@ public class Enemy {
         health = 10;
     }
 
+    /**
+     * Method that moves the enemy to the next location. If there are multiple
+     * possible locations available a random location is chosen.
+     */
     public void move() {
         List<Point> moves = board.getConnections(location);
         location = moves.get(random.nextInt(moves.size()));

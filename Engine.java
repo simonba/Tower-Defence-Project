@@ -24,6 +24,11 @@ public class Engine {
         //removeSurvivors(enemies);
     }
 
+    /**
+     * Moves all enemies that exist. 
+     *
+     * @param enemies the enemies that are being moved.
+     */
     private void moveEnemies(List<Enemy> enemies) {
         for (Enemy enemy : enemies) {
             enemy.move();
