@@ -48,6 +48,7 @@ public class Enemy {
      * A method that checks if there are any enemies at
      * an endingpoint. If so the method returns true.
      *
+     * 
      * @return true if a enemy is found and false if not.
      */
     public boolean isSurvivor() {
