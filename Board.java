@@ -17,10 +17,22 @@ public class Board {
         endingPoints = new ArrayList<Point>();
     }
 
+    /**
+     * This method creates a starting point that the enemies are supposed to start on.
+     *
+     * @param x the position in x-direction
+     * @param y the position in y-direction
+     */
     public void addStartingPoint(int x, int y) {
         startingPoints.add(new Point(x,y));
     }
 
+    /**
+     * This method creates an ending point that the enemies are supposed to reach.
+     *
+     * @param x the position in x-direction.
+     * @param y the position in y-direction.
+     */
     public void addEndingPoint(int x, int y) {
         endingPoints.add(new Point(x,y));
     }
