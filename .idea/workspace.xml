@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df6bce2d-4665-4bc1-9460-81c17eff47fc" name="Default" comment="" />
+    <list default="true" id="df6bce2d-4665-4bc1-9460-81c17eff47fc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Enemy.java" afterPath="$PROJECT_DIR$/Enemy.java" />
+    </list>
     <ignored path="Tower-Defence-Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -63,8 +65,8 @@
       <file leaf-file-name="Enemy.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Enemy.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="106">
-              <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+            <state relative-caret-position="361">
+              <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#717#718#0" expanded="true" />
@@ -697,12 +699,12 @@
       <workItem from="1463749425400" duration="420000" />
       <workItem from="1464012709963" duration="2554000" />
       <workItem from="1464015394811" duration="25000" />
-      <workItem from="1464015548783" duration="1953000" />
+      <workItem from="1464015548783" duration="2189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24765000" />
+    <option name="totallyTimeSpent" value="25001000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1266,8 +1268,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Enemy.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
+        <state relative-caret-position="361">
+          <caret line="63" column="46" selection-start-line="63" selection-start-column="46" selection-end-line="63" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#717#718#0" expanded="true" />

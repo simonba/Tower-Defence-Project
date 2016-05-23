@@ -59,6 +59,10 @@ public class Enemy {
         return false;
     }
 
+    /**
+     * Check if enemy is alive
+     * @return true if alive, false otherwise.
+     */
     public boolean isAlive() {
         return health > 0;
     }
