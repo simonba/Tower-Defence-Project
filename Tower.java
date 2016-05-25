@@ -1,11 +1,16 @@
 import java.awt.Point;
 
-//the tower class that will be base of the tower functions. 
-
+//the tower class that will be base of the tower functions.
 public class Tower {
     static private Point location;
     private double range;
 
+    /**
+     * Constructor for Tower
+     * @param x Point in x-direction
+     * @param y Point in y-direction
+     * @param range The range that the towers have for shooting enemies.
+     */
     public Tower(int x, int y, double range) {
         location = new Point(x, y);
         this.range = range;
