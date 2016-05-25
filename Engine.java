@@ -1,9 +1,5 @@
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
-
-
-
 
 public class Engine {
 
@@ -14,7 +10,6 @@ public class Engine {
      */
     public Engine() {
         counter = 0;
-        Random random = new Random();
     }
 
     /**
