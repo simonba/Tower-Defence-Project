@@ -9,6 +9,9 @@ public class Engine {
 
     int counter;
 
+    /**
+     * Constructor for Engine.
+     */
     public Engine() {
         counter = 0;
         Random random = new Random();
