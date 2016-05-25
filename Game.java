@@ -47,6 +47,12 @@ public class Game {
         return false;
     }
 
+    /**
+     * Checks if there are any enemies available.
+     * @param x in x-direction.
+     * @param y in y-direction.
+     * @return true if a enemy is found, false otherwise.
+     */
     public boolean isEnemyMatch(int x, int y) {
         for (Enemy enemy : enemies) {
             if (enemy.match(x, y)) {
@@ -56,6 +62,10 @@ public class Game {
         return false;
     }
 
+    /**
+     * Creates a Board with the specific starting and endingpoints.
+     * @return the Board
+     */
     private Board createBoard() {
         Board newBoard = new Board(X_SIZE, Y_SIZE);
         newBoard.addStartingPoint(0,1);
@@ -72,6 +82,9 @@ public class Game {
         return newBoard;
     }
 
+    /**
+     * Prints out the board, towers and enemies.
+     */
     public void dump() {
         for (int y = 0; y < Y_SIZE; y++) {
             for (int x = 0; x < X_SIZE; x++) {
