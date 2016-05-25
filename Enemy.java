@@ -2,6 +2,7 @@ import java.util.List;
 import java.awt.Point;
 import java.util.Random;
 
+
 public class Enemy {
     private final Random random;
     private Board board;
@@ -30,6 +31,9 @@ public class Enemy {
         location = moves.get(random.nextInt(moves.size()));
     }
 
+    /**
+     * The enemies takes damage.
+     */
     public static void hit() {
         health = health - 2;
     }
@@ -53,8 +57,6 @@ public class Enemy {
     /**
      * A method that checks if there are any enemies at
      * an endingpoint. If so the method returns true.
-     *
-     *
      *
      * @return true if a enemy is found and false if not.
      */
