@@ -9,6 +9,11 @@ public class Board {
     private List<Point> startingPoints;
     private List<Point> endingPoints;
 
+    /**
+     * Constructor for Board.
+     * @param xSize
+     * @param ySize
+     */
     public Board(int xSize, int ySize) {
         connections = new ArrayList[xSize][ySize];
         startingPoints = new ArrayList<Point>();
@@ -64,14 +69,20 @@ public class Board {
         connections[fromX][fromY].add(new Point(toX, toY));
     }
 
+    /**
+     * This method gets what a location point on.
+     *
+     * @param location The location that is being investigated.
+     * @return The connections as an ArrayList.
+     */
     public List<Point> getConnections(Point location) {
         return connections[location.x][location.y];
     }
 
     /**
+     *Returns the endingpoints.
      *
-     *
-     * @return
+     * @return endingpoints.
      */
     public List<Point> getEndingPoints() {
         return endingPoints;
