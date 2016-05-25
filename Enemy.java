@@ -8,6 +8,12 @@ public class Enemy {
     static Point location;
     static int health;
 
+    /**
+     * Constuctor for Enemy.
+     * @param board the board
+     * @param x Point in x-direction
+     * @param y Point in y-direction
+     */
     public Enemy(Board board, int x, int y) {
         random = new Random();
         this.board = board;
@@ -49,7 +55,7 @@ public class Enemy {
      * an endingpoint. If so the method returns true.
      *
      *
-     * 
+     *
      * @return true if a enemy is found and false if not.
      */
     public boolean isSurvivor() {

@@ -35,6 +35,12 @@ public class Board {
         endingPoints.add(new Point(x,y));
     }
 
+    /**
+     *
+     * @param x
+     * @param y
+     * @return
+     */
     public boolean isPath(int x, int y) {
         return connections[x][y] != null;
     }
@@ -53,6 +59,11 @@ public class Board {
         return connections[location.x][location.y];
     }
 
+    /**
+     *
+     *
+     * @return
+     */
     public List<Point> getEndingPoints() {
         return endingPoints;
     }
