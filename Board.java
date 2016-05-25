@@ -36,10 +36,10 @@ public class Board {
     }
 
     /**
-     *
-     * @param x
-     * @param y
-     * @return
+     *This method checks if there is a path between two locations.
+     * @param x location in x-direction.
+     * @param y location in y-direction.
+     * @return true if there is a path, false otherwise.
      */
     public boolean isPath(int x, int y) {
         return connections[x][y] != null;
