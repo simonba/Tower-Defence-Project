@@ -1,6 +1,8 @@
 import java.util.List;
 import java.util.ArrayList;
 
+//The Game class is the main class of the game that runs the run method and main loop.
+
 
 public class Game {
 
@@ -11,6 +13,10 @@ public class Game {
     private List<Enemy> enemies;
     Engine engine;
 
+    /**
+     * Constructor for the game. Different variables are created to be able to
+     * use other classes in this class.
+     */
     public Game() {
         towers = new ArrayList<Tower>();
         enemies = new ArrayList<Enemy>();
@@ -22,6 +28,10 @@ public class Game {
         dump(); 
     }
 
+    /**
+     * A method to run the board and then go to next step and update what gets
+     * printed.
+     */
     public void run() {
         while (true) {
             engine.act(enemies);
@@ -38,6 +48,12 @@ public class Game {
         }
     }
 
+    /**
+     * Checks if there are any towers available.
+     * @param x in x-direction
+     * @param y in y-direction
+     * @return true if a tower is found, false otherwise.
+     */
     public boolean isTowerMatch(int x, int y) {
         for (Tower tower : towers) {
             if (tower.match(x, y)) {
