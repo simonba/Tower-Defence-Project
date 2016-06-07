@@ -6,6 +6,7 @@ import org.newdawn.slick.geom.Shape;
 public class TowerDefence extends BasicGame {
 
     private Shape circle = null;
+//    private ArrayList<Enemy> enemies;
 
 
 
@@ -14,10 +15,16 @@ public class TowerDefence extends BasicGame {
     }
 
     public void init(GameContainer GC) throws SlickException {
-        circle = new Circle(75, 100, 15);
+        circle = new Circle(5, 100, 15);
 
 
     }
+
+//    public void enemyAnimation() {
+//        Animation enemyMove = new Animation();
+//       for (int i = 0; i < 50; i++) {
+//        }
+//    }
 
 
     public void render(GameContainer container, Graphics g) throws SlickException {
@@ -28,7 +35,15 @@ public class TowerDefence extends BasicGame {
     }
 
 
+
     public void update(GameContainer gc, int in) throws SlickException {
+
+
+        float f = circle.getX();
+        f = f+0.1f;
+
+        circle.setX(f);
+
 
     }
 
