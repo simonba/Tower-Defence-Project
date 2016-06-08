@@ -8,7 +8,6 @@ public class GameState extends StateBasedGame {
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
 
-
     }
 
 
