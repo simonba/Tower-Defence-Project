@@ -28,12 +28,12 @@ public class GameOverState extends BasicGameState {
     public void render(GameContainer container, StateBasedGame state, Graphics g) throws SlickException {
 
 
-        g.drawString("Game Over", 300, 300);
+        g.drawString("Game Over, Press 0 to start the game again", 300, 300);
     }
 
 
     public int getID() {
-        return 1;
+        return 2;
     }
 
 }

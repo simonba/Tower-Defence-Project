@@ -25,8 +25,8 @@ public class GameState extends BasicGameState {
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
 
-        if(gc.getInput().isKeyPressed(Input.KEY_1)) {
-            state.enterState(1, new FadeOutTransition(), new FadeInTransition());
+        if(gc.getInput().isKeyPressed(Input.KEY_2)) {
+            state.enterState(2, new FadeOutTransition(), new FadeInTransition());
         }
 
         tower.setCenterX(gc.getInput().getMouseX());
@@ -48,7 +48,7 @@ public class GameState extends BasicGameState {
 
 
     public int getID() {
-        return 0;
+        return 1;
     }
 
 }

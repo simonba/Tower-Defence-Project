@@ -20,6 +20,8 @@ public class TowerDefence extends StateBasedGame {
     public void initStatesList(GameContainer gc) throws SlickException {
         circle = new Circle(5, 100, 15);
 
+        this.addState(new BoringStartScreen());
+
         this.addState(new GameState());
 
         this.addState(new GameOverState());
