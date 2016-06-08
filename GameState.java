@@ -66,8 +66,10 @@ public class GameState extends BasicGameState {
     public void render(GameContainer container, StateBasedGame state, Graphics g) throws SlickException {
 
 
-        g.drawString("State1", 50, 50);
-        g.drawString("Enemy survivors: " + counter, 50, 65);
+        g.drawString("GameState, wihoo", 50, 50);
+        g.drawString("Press Enter to construct a tower", 50, 70);
+        g.drawString("Kill as many enemies as you can", 50, 90);
+        g.drawString("Enemy survivors: " + counter, 50, 110);
         g.setBackground(Color.green);
 
         g.setColor(Color.blue);
