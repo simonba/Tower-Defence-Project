@@ -14,6 +14,8 @@ public class GameState extends BasicGameState {
     private Circle tower;
     private int time;
     private int counter = 0;
+    private float x;
+    private float y;
 
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
@@ -36,6 +38,12 @@ public class GameState extends BasicGameState {
 
         tower.setCenterX(gc.getInput().getMouseX());
         tower.setCenterY(gc.getInput().getMouseY());
+
+        if(gc.getInput().isKeyPressed(Input.KEY_ENTER)) {
+            x = tower.getCenterX();
+            y = tower.getCenterY();
+            towers.add(new Circle(x, y, 20));
+        }
 
         time +=delta;
         if(time>200) {
@@ -64,6 +72,11 @@ public class GameState extends BasicGameState {
 
         g.setColor(Color.blue);
         g.fill(tower);
+
+        g.setColor(Color.blue);
+        for(Circle tower : towers) {
+            g.fill(tower);
+        }
 
         g.setColor(Color.red);
         for(Circle enemy : enemies) {

@@ -19,7 +19,7 @@ public class BoringStartScreen extends BasicGameState {
 
 
         g.drawString("The most boring starting screen u have ever seen, press 1 to start the game", 50, 50);
-        
+
     }
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
