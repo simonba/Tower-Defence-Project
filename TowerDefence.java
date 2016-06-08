@@ -22,6 +22,9 @@ public class TowerDefence extends StateBasedGame {
 
         this.addState(new GameState());
 
+        this.addState(new GameOverState());
+
+
     }
 
 //    public void enemyAnimation() {

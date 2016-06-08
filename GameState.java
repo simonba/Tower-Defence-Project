@@ -1,13 +1,22 @@
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
+import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.state.transition.FadeInTransition;
+import org.newdawn.slick.state.transition.FadeOutTransition;
+
+import java.util.ArrayList;
 
 public class GameState extends BasicGameState {
 
+    private ArrayList<Circle> towers;
+    private Circle tower;
+
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
+
+        towers = new ArrayList<Circle>();
+        tower = new Circle(0, 0, 20);
 
     }
 
@@ -15,11 +24,25 @@ public class GameState extends BasicGameState {
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
+
+        if(gc.getInput().isKeyPressed(Input.KEY_1)) {
+            state.enterState(1, new FadeOutTransition(), new FadeInTransition());
+        }
+
+        tower.setCenterX(gc.getInput().getMouseX());
+        tower.setCenterY(gc.getInput().getMouseY());
+
     }
 
 
     public void render(GameContainer container, StateBasedGame state, Graphics g) throws SlickException {
 
+
+        g.drawString("State1", 50, 50);
+        g.setBackground(Color.green);
+
+        g.setColor(Color.blue);
+        g.fill(tower);
 
     }
 

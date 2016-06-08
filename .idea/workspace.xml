@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6bce2d-4665-4bc1-9460-81c17eff47fc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GameOverState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameOverState.java" afterPath="$PROJECT_DIR$/GameOverState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameState.java" afterPath="$PROJECT_DIR$/GameState.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TowerDefence.java" afterPath="$PROJECT_DIR$/TowerDefence.java" />
     </list>
     <ignored path="Tower-Defence-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,22 +34,20 @@
       <file leaf-file-name="TowerDefence.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TowerDefence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#435#436#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="GameState.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="30" column="1" selection-start-line="6" selection-start-column="23" selection-end-line="30" selection-end-column="1" />
+            <state relative-caret-position="300">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -54,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameOverState.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameOverState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameOverState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
+            <state relative-caret-position="405">
+              <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,8 +96,8 @@
         <option value="$PROJECT_DIR$/Map.java" />
         <option value="$PROJECT_DIR$/StateGame.java" />
         <option value="$PROJECT_DIR$/TowerDefence.java" />
-        <option value="$PROJECT_DIR$/GameState.java" />
         <option value="$PROJECT_DIR$/GameOverState.java" />
+        <option value="$PROJECT_DIR$/GameState.java" />
       </list>
     </option>
   </component>
@@ -135,8 +136,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -157,7 +156,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -721,12 +722,20 @@
       <workItem from="1465398042163" duration="36000" />
       <workItem from="1465398093889" duration="138000" />
       <workItem from="1465398249594" duration="19000" />
-      <workItem from="1465398283979" duration="1023000" />
+      <workItem from="1465398283979" duration="1091000" />
+      <workItem from="1465399391388" duration="11000" />
+      <workItem from="1465399434694" duration="103000" />
+      <workItem from="1465399547129" duration="19000" />
+      <workItem from="1465399586817" duration="12000" />
+      <workItem from="1465399627065" duration="30000" />
+      <workItem from="1465399678904" duration="87000" />
+      <workItem from="1465399789583" duration="21000" />
+      <workItem from="1465399827029" duration="22000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37844000" />
+    <option name="totallyTimeSpent" value="38217000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1101,26 +1110,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="30" column="1" selection-start-line="6" selection-start-column="23" selection-end-line="30" selection-end-column="1" />
+        <state relative-caret-position="270">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1129,8 +1125,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameOverState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="97" selection-start-line="15" selection-start-column="97" selection-end-line="15" selection-end-column="97" />
+        <state relative-caret-position="405">
+          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

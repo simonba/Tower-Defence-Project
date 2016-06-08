@@ -21,11 +21,12 @@ public class GameOverState extends BasicGameState {
     public void render(GameContainer container, StateBasedGame state, Graphics g) throws SlickException {
 
 
+        g.drawString("Game Over", 300, 300);
     }
 
 
     public int getID() {
-        return 0;
+        return 1;
     }
 
 }
