@@ -42,6 +42,11 @@ public class GameState extends BasicGameState {
             enemies.add(new Circle(0, 300, 15));
         }
 
+        for(Circle enemy : enemies) {
+            float center = enemy.getCenterX();
+            enemy.setCenterX(center+(delta/5f));
+        }
+
     }
 
 
