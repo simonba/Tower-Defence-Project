@@ -10,6 +10,7 @@ import java.util.ArrayList;
 public class GameState extends BasicGameState {
 
     private ArrayList<Circle> towers;
+    private ArrayList<Circle> enemies;
     private Circle tower;
     private int time;
 
@@ -38,6 +39,7 @@ public class GameState extends BasicGameState {
         time +=delta;
         if(time>200) {
             time = 0;
+            enemies.add(new Circle(0, 300, 15));
         }
 
     }
