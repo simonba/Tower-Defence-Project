@@ -11,12 +11,15 @@ public class GameState extends BasicGameState {
 
     private ArrayList<Circle> towers;
     private Circle tower;
+    private int time;
 
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
 
         towers = new ArrayList<Circle>();
         tower = new Circle(0, 0, 20);
+        enemies = new ArrayList<Circle>;
+        time = 0;
 
     }
 
@@ -31,6 +34,11 @@ public class GameState extends BasicGameState {
 
         tower.setCenterX(gc.getInput().getMouseX());
         tower.setCenterY(gc.getInput().getMouseY());
+
+        time +=delta;
+        if(time>200) {
+            time = 0;
+        }
 
     }
 
