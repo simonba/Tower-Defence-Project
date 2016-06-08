@@ -6,7 +6,7 @@ import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.AppGameContainer;
 
 
-public class TowerDefence extends BasicGameState {
+public class TowerDefence extends StateBasedGame {
 
     private Shape circle = null;
 //    private ArrayList<Enemy> enemies;
