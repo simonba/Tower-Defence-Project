@@ -13,6 +13,7 @@ public class GameState extends BasicGameState {
     private ArrayList<Circle> enemies;
     private Circle tower;
     private int time;
+    private int counter = 0;
 
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
@@ -29,7 +30,7 @@ public class GameState extends BasicGameState {
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
 
-        if(gc.getInput().isKeyPressed(Input.KEY_2)) {
+        if(counter >= 25) {
             state.enterState(2, new FadeOutTransition(), new FadeInTransition());
         }
 
@@ -39,12 +40,16 @@ public class GameState extends BasicGameState {
         time +=delta;
         if(time>200) {
             time = 0;
-            enemies.add(new Circle(0, 300, 15));
+            enemies.add(new Circle(0, 300, 13));
         }
 
         for(Circle enemy : enemies) {
             float center = enemy.getCenterX();
             enemy.setCenterX(center+(delta/5f));
+            if(enemy.getCenterX() >= 800f && enemy.getCenterX() <= 800.2f) {
+                counter++;
+
+            }
         }
 
     }
@@ -54,6 +59,7 @@ public class GameState extends BasicGameState {
 
 
         g.drawString("State1", 50, 50);
+        g.drawString("Enemy survivors: " + counter, 50, 65);
         g.setBackground(Color.green);
 
         g.setColor(Color.blue);
