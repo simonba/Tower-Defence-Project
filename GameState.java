@@ -11,11 +11,15 @@ public class GameState extends BasicGameState {
 
     private ArrayList<Circle> towers;
     private ArrayList<Circle> enemies;
+    private ArrayList<Circle> bullets;
     private Circle tower;
     private int time;
     private int counter = 0;
     private float x;
     private float y;
+    private float range = 25;
+    private int health = 10;
+
 
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
@@ -23,11 +27,22 @@ public class GameState extends BasicGameState {
         towers = new ArrayList<Circle>();
         tower = new Circle(0, 0, 20);
         enemies = new ArrayList<Circle>();
+        bullets = new ArrayList<Circle>();
         time = 0;
 
     }
 
+    public void hitTargets() {
+        health = health - 2;
+    }
 
+    public void shoot() {
+        for(Circle tower : towers) {
+            x = tower.getCenterX();
+            y = tower.getCenterY();
+            bullets.add(new Circle(x, y, 5));
+        }
+    }
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
@@ -45,6 +60,8 @@ public class GameState extends BasicGameState {
             towers.add(new Circle(x, y, 20));
         }
 
+        shoot();
+
         time +=delta;
         if(time>200) {
             time = 0;
@@ -56,7 +73,6 @@ public class GameState extends BasicGameState {
             enemy.setCenterX(center+(delta/5f));
             if(enemy.getCenterX() >= 800f && enemy.getCenterX() <= 800.2f) {
                 counter++;
-
             }
         }
 
@@ -78,6 +94,11 @@ public class GameState extends BasicGameState {
         g.setColor(Color.blue);
         for(Circle tower : towers) {
             g.fill(tower);
+        }
+
+        g.setColor(Color.black);
+        for(Circle bullet : bullets) {
+            g.fill(bullet);
         }
 
         g.setColor(Color.red);
