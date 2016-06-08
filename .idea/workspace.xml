@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6bce2d-4665-4bc1-9460-81c17eff47fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameOverState.java" afterPath="$PROJECT_DIR$/GameOverState.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/BoringStartScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Tower-Defence-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,7 +32,7 @@
       <file leaf-file-name="TowerDefence.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TowerDefence.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="345">
               <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -43,7 +44,7 @@
       <file leaf-file-name="GameState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
+            <state relative-caret-position="405">
               <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="29" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -52,15 +53,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameOverState.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameOverState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GameOverState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#957#958#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoringStartScreen.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/BoringStartScreen.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,6 +108,7 @@
         <option value="$PROJECT_DIR$/TowerDefence.java" />
         <option value="$PROJECT_DIR$/GameState.java" />
         <option value="$PROJECT_DIR$/GameOverState.java" />
+        <option value="$PROJECT_DIR$/BoringStartScreen.java" />
       </list>
     </option>
   </component>
@@ -135,6 +147,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -156,8 +170,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -729,12 +741,14 @@
       <workItem from="1465399627065" duration="30000" />
       <workItem from="1465399678904" duration="87000" />
       <workItem from="1465399789583" duration="21000" />
-      <workItem from="1465399827029" duration="123000" />
+      <workItem from="1465399827029" duration="199000" />
+      <workItem from="1465400394759" duration="8000" />
+      <workItem from="1465400420976" duration="47000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38318000" />
+    <option name="totallyTimeSpent" value="38449000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -782,13 +796,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tower.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1114,7 +1121,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TowerDefence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="345">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1124,7 +1131,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
+        <state relative-caret-position="405">
           <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="29" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1134,12 +1141,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameOverState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#957#958#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BoringStartScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
