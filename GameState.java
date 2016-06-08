@@ -19,7 +19,7 @@ public class GameState extends BasicGameState {
 
         towers = new ArrayList<Circle>();
         tower = new Circle(0, 0, 20);
-        enemies = new ArrayList<Circle>;
+        enemies = new ArrayList<Circle>();
         time = 0;
 
     }
@@ -53,6 +53,11 @@ public class GameState extends BasicGameState {
 
         g.setColor(Color.blue);
         g.fill(tower);
+
+        g.setColor(Color.red);
+        for(Circle enemy : enemies) {
+            g.fill(enemy);
+        }
 
     }
 
