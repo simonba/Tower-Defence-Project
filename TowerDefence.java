@@ -1,9 +1,10 @@
 import org.newdawn.slick.*;
 import org.newdawn.slick.geom.Circle;
 import org.newdawn.slick.geom.Shape;
+import org.newdawn.slick.state.StateBasedGame;
 
 
-public class TowerDefence extends BasicGame {
+public class TowerDefence extends StateBasedGame {
 
     private Shape circle = null;
 //    private ArrayList<Enemy> enemies;
@@ -14,9 +15,9 @@ public class TowerDefence extends BasicGame {
         super(title);
     }
 
-    public void init(GameContainer GC) throws SlickException {
+    public void initSateList(GameContainer gc) throws SlickException {
         circle = new Circle(5, 100, 15);
-
+  
 
     }
 
@@ -26,26 +27,6 @@ public class TowerDefence extends BasicGame {
 //        }
 //    }
 
-
-    public void render(GameContainer container, Graphics g) throws SlickException {
-        g.draw(circle);
-        g.setBackground(Color.green);
-
-
-    }
-
-
-
-    public void update(GameContainer gc, int in) throws SlickException {
-
-
-        float f = circle.getX();
-        f = f+0.1f;
-
-        circle.setX(f);
-
-
-    }
 
     public static void main (String[] args) throws SlickException {
         AppGameContainer app = new AppGameContainer(new TowerDefence("Tower Defence"));
