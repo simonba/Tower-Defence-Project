@@ -19,10 +19,10 @@ public class GameState extends BasicGameState {
     private int counter = 0;
     private float x;
     private float y;
-    private float range = 25;
+    private float range = 50;
     private int health = 10;
     private Random random;
-
+    private int isInRange = 0;
 
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
@@ -41,7 +41,7 @@ public class GameState extends BasicGameState {
     }
 
     public void makeBullet() {
-        for(Circle tower : towers) {
+        for (Circle tower : towers) {
             x = tower.getCenterX();
             y = tower.getCenterY();
             towers.add(new Circle(x, y, 10));
@@ -65,16 +65,37 @@ public class GameState extends BasicGameState {
     }
 
 
+  /*  private double distance() {
+        return Math.sqrt(((tower.getCenterX() - enemy.getCenterX())*(tower.getCenterX() - enemy.getCenterX()))
+        + ((tower.getCenterY() - enemy.getCenterY())*(tower.getCenterY() - enemy.getCenterY())));
+    }
+
 
     public void withinRange() {
         for (Circle tower : towers) {
             for (int i = enemies.size() - 1; i >= 0; i--) {
-                if (tower.getCenterX() - enemy.getCenterX() <= range && tower.getCenterY() - enemy.getCenterY() <= range) {
-                    enemies.remove(i);
+                if (distance() < range);
+                isInRange++;
+            }
+        }
+    }
+*/
+
+    public void withinRange() {
+        for (int j = towers.size() - 1; j >= 0; j-- ) {
+            Circle torn = towers.get(j);
+            for (int i = enemies.size() - 1; i >= 0; i--) {
+                Circle fiende = enemies.get(i);
+                if (torn.getCenterX() - fiende.getCenterX() <= range && torn.getCenterX() - fiende.getCenterX() >= -range
+                        && torn.getCenterY() - fiende.getCenterY() <= range && torn.getCenterY() - fiende.getCenterY() >= -range) {
+                    isInRange++;
                 }
             }
         }
     }
+
+
+
 
 
 
@@ -122,7 +143,7 @@ public class GameState extends BasicGameState {
           //  bullet.setCenterY(centerY+(delta/5f));
         }
 
-     //   shootEnemies();
+       // shootEnemies();
 
         for(int i = enemies.size()- 1; i >= 0; i--) {
             Circle enemy = enemies.get(i);
@@ -136,6 +157,7 @@ public class GameState extends BasicGameState {
     public void render(GameContainer container, StateBasedGame state, Graphics g) throws SlickException {
 
 
+        g.drawString("is in range  "+ isInRange, 50, 30);
         g.drawString("GameState, wihoo", 50, 50);
         g.drawString("Press Enter to construct a tower", 50, 70);
         g.drawString("Kill as many enemies as you can", 50, 90);
