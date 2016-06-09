@@ -27,6 +27,7 @@ public class GameState extends BasicGameState {
     private int coins = 100;
 
 
+
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
 
         towers = new ArrayList<Circle>();
@@ -115,6 +116,10 @@ public class GameState extends BasicGameState {
             state.enterState(2, new FadeOutTransition(), new FadeInTransition());
         }
 
+        if (isInRange >= 50 && counter < 25) {
+            state.enterState(3, new FadeOutTransition(), new FadeInTransition());
+        }
+
         tower.setCenterX(gc.getInput().getMouseX());
         tower.setCenterY(gc.getInput().getMouseY());
 
@@ -169,7 +174,7 @@ public class GameState extends BasicGameState {
 
 
         g.drawString("GameState, wihoo", 50, 30);
-        g.drawString("is in range  "+ isInRange, 50, 50);
+        g.drawString("Enemies killed  "+ isInRange, 50, 50);
         g.drawString("Your coins = "+ coins, 50, 70);
         g.drawString("Enemy survivors: " + counter, 50, 90);
         g.drawString("It costs 10 coins to construct a tower", 50, 110);
