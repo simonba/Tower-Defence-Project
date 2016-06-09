@@ -138,9 +138,6 @@ public class GameState extends BasicGameState {
         for(Circle enemy : enemies) {
             float center = enemy.getCenterX();
             enemy.setCenterX(center+(delta/10f));
-            if(enemy.getCenterX() >= 800f && enemy.getCenterX() <= 800.2f) {
-                counter++;
-            }
         }
 
         withinRange();
@@ -156,8 +153,9 @@ public class GameState extends BasicGameState {
 
         for(int i = enemies.size()- 1; i >= 0; i--) {
             Circle enemy = enemies.get(i);
-            if(enemy.getX()>800.1f) {
+            if(enemy.getX()>800f) {
                 enemies.remove(i);
+                counter++;
             }
         }
     }
