@@ -58,8 +58,8 @@ public class GameState extends BasicGameState {
         }
     }
 
-    public boolean isAlive() {
-        return health > 0; 
+    public int checkHealth() {
+        return health;
     }
 
 
@@ -109,6 +109,9 @@ public class GameState extends BasicGameState {
 
         for(int i = enemies.size()- 1; i >= 0; i--) {
             Circle enemy = enemies.get(i);
+            if(checkHealth() < 0) {
+                enemies.remove(i);
+            }
             if(enemy.getX()>800.1f) {
                 enemies.remove(i);
             }
