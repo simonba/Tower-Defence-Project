@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6bce2d-4665-4bc1-9460-81c17eff47fc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GameState.java" afterPath="$PROJECT_DIR$/GameState.java" />
     </list>
     <ignored path="Tower-Defence-Project.iws" />
@@ -45,8 +44,8 @@
       <file leaf-file-name="GameState.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/GameState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+            <state relative-caret-position="301">
+              <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -773,12 +772,12 @@
       <workItem from="1465467857813" duration="173000" />
       <workItem from="1465468065362" duration="135000" />
       <workItem from="1465468228746" duration="79000" />
-      <workItem from="1465469331381" duration="570000" />
+      <workItem from="1465469331381" duration="844000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45490000" />
+    <option name="totallyTimeSpent" value="45764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1182,8 +1181,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/GameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="47" column="2" selection-start-line="47" selection-start-column="2" selection-end-line="47" selection-end-column="2" />
+        <state relative-caret-position="301">
+          <caret line="103" column="24" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -45,7 +45,7 @@ public class GameState extends BasicGameState {
             towers.add(new Circle(x, y, 10));
         }
     }
-  
+
     public void shootEnemies() {
         for (Circle tower : towers) {
             for (Circle enemy : enemies) {
@@ -101,7 +101,7 @@ public class GameState extends BasicGameState {
             bullet.setCenterX(centerX+(delta/5f));
           //  bullet.setCenterY(centerY+(delta/5f));
         }
-        withinRange();
+        shootEnemies(); 
     }
 
 
