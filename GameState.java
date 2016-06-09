@@ -81,7 +81,7 @@ public class GameState extends BasicGameState {
         }
 
         time +=delta;
-        if(time>200) {
+        if(time>1000) {
             time = 0;
             enemies.add(new Circle(0, 300, 13));
             bullets.add(new Circle(x, y, 5));
@@ -89,7 +89,7 @@ public class GameState extends BasicGameState {
 
         for(Circle enemy : enemies) {
             float center = enemy.getCenterX();
-            enemy.setCenterX(center+(delta/5f));
+            enemy.setCenterX(center+(delta/10f));
             if(enemy.getCenterX() >= 800f && enemy.getCenterX() <= 800.2f) {
                 counter++;
             }
@@ -101,7 +101,14 @@ public class GameState extends BasicGameState {
             bullet.setCenterX(centerX+(delta/5f));
           //  bullet.setCenterY(centerY+(delta/5f));
         }
-        shootEnemies(); 
+        shootEnemies();
+
+        for(int i = enemies.size()- 1; i >= 0; i--) {
+            Circle enemy = enemies.get(i);
+            if(enemy.getX()>800.1f) {
+                enemies.remove(i);
+            }
+        }
     }
 
 
