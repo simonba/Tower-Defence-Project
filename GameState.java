@@ -24,6 +24,7 @@ public class GameState extends BasicGameState {
     private int health = 10;
     private Random random;
     private int isInRange = 0;
+    private int coins = 100;
 
 
     public void init(GameContainer container, StateBasedGame game) throws SlickException {
@@ -83,8 +84,6 @@ public class GameState extends BasicGameState {
 */
 
 
-
-
     public void withinRange() {
         for (int j = towers.size() - 1; j >= 0; j--) {
             Circle torn = towers.get(j);
@@ -104,71 +103,78 @@ public class GameState extends BasicGameState {
     }
 
 
-
-
+    public int getCoins() {
+        return coins;
+    }
 
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
 
-        if(counter >= 25) {
+        if (counter >= 25) {
             state.enterState(2, new FadeOutTransition(), new FadeInTransition());
         }
 
         tower.setCenterX(gc.getInput().getMouseX());
         tower.setCenterY(gc.getInput().getMouseY());
 
-        if(gc.getInput().isKeyPressed(Input.KEY_ENTER)) {
-            x = tower.getCenterX();
-            y = tower.getCenterY();
-            towers.add(new Circle(x, y, 20));
-        }
+        if (gc.getInput().isKeyPressed(Input.KEY_ENTER) && getCoins() > 0) {
+                x = tower.getCenterX();
+                y = tower.getCenterY();
+                towers.add(new Circle(x, y, 20));
+                coins = coins - 10;
+            }
 
-        for(Circle tower : towers) {
-            x = tower.getCenterX();
-            y = tower.getCenterY();
-        }
-        time +=delta;
-        if(time>1000) {
-            time = 0;
-            enemies.add(new Circle(0, 300, 13));
-            bullets.add(new Circle(x, y, 5));
-        }
 
-        for(Circle enemy : enemies) {
-            float center = enemy.getCenterX();
-            enemy.setCenterX(center+(delta/10f));
-        }
+            for (Circle tower : towers) {
+                x = tower.getCenterX();
+                y = tower.getCenterY();
+            }
+            time += delta;
+            if (time > 1000) {
+                time = 0;
+                enemies.add(new Circle(0, 300, 13));
+                bullets.add(new Circle(x, y, 5));
+            }
 
-        withinRange();
+            for (Circle enemy : enemies) {
+                float center = enemy.getCenterX();
+                enemy.setCenterX(center + (delta / 10f));
+            }
 
-        for(Circle bullet : bullets) {
-            float centerX = bullet.getCenterX();
-            //float centerY = bullet.getCenterY();
-            bullet.setCenterX(centerX+(delta/5f));
-          //  bullet.setCenterY(centerY+(delta/5f));
-        }
+            withinRange();
 
-       // shootEnemies();
+            for (Circle bullet : bullets) {
+                float centerX = bullet.getCenterX();
+                //float centerY = bullet.getCenterY();
+                bullet.setCenterX(centerX + (delta / 5f));
+                //  bullet.setCenterY(centerY+(delta/5f));
+            }
 
-        for(int i = enemies.size()- 1; i >= 0; i--) {
-            Circle enemy = enemies.get(i);
-            if(enemy.getX()>800f) {
-                enemies.remove(i);
-                counter++;
+            // shootEnemies();
+
+            for (int i = enemies.size() - 1; i >= 0; i--) {
+                Circle enemy = enemies.get(i);
+                if (enemy.getX() > 800f) {
+                    enemies.remove(i);
+                    counter++;
+                }
             }
         }
-    }
+    
+
 
 
     public void render(GameContainer container, StateBasedGame state, Graphics g) throws SlickException {
 
 
-        g.drawString("is in range  "+ isInRange, 50, 30);
-        g.drawString("GameState, wihoo", 50, 50);
-        g.drawString("Press Enter to construct a tower", 50, 70);
-        g.drawString("Kill as many enemies as you can", 50, 90);
-        g.drawString("Enemy survivors: " + counter, 50, 110);
+        g.drawString("GameState, wihoo", 50, 30);
+        g.drawString("is in range  "+ isInRange, 50, 50);
+        g.drawString("Your coins = "+ coins, 50, 70);
+        g.drawString("Enemy survivors: " + counter, 50, 90);
+        g.drawString("It costs 10 coins to construct a tower", 50, 110);
+        g.drawString("Press Enter to construct a tower", 50, 130);
+        g.drawString("Kill as many enemies as you can", 50, 150);
         g.setBackground(Color.green);
 
         g.setColor(Color.blue);
