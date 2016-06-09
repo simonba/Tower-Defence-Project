@@ -14,11 +14,12 @@ public class GameState extends BasicGameState {
     private ArrayList<Circle> enemies;
     private ArrayList<Circle> bullets;
     private Circle tower;
+    private Circle enemy;
     private int time;
     private int counter = 0;
     private float x;
     private float y;
-    private float range = Math.abs(25);
+    private float range = 25;
     private int health = 10;
     private Random random;
 
@@ -28,6 +29,7 @@ public class GameState extends BasicGameState {
 
         towers = new ArrayList<Circle>();
         tower = new Circle(0, 0, 20);
+        enemy = new Circle(0, 0, 10);
         enemies = new ArrayList<Circle>();
         bullets = new ArrayList<Circle>();
         time = 0;
@@ -63,6 +65,19 @@ public class GameState extends BasicGameState {
     }
 
 
+
+    public void withinRange() {
+        for (Circle tower : towers) {
+            for (int i = enemies.size() - 1; i >= 0; i--) {
+                if (tower.getCenterX() - enemy.getCenterX() <= range && tower.getCenterY() - enemy.getCenterY() <= range) {
+                    enemies.remove(i);
+                }
+            }
+        }
+    }
+
+
+
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
 
@@ -83,7 +98,6 @@ public class GameState extends BasicGameState {
             x = tower.getCenterX();
             y = tower.getCenterY();
         }
-
         time +=delta;
         if(time>1000) {
             time = 0;
@@ -99,19 +113,19 @@ public class GameState extends BasicGameState {
             }
         }
 
+        withinRange();
+
         for(Circle bullet : bullets) {
             float centerX = bullet.getCenterX();
             //float centerY = bullet.getCenterY();
             bullet.setCenterX(centerX+(delta/5f));
           //  bullet.setCenterY(centerY+(delta/5f));
         }
-        shootEnemies();
+
+     //   shootEnemies();
 
         for(int i = enemies.size()- 1; i >= 0; i--) {
             Circle enemy = enemies.get(i);
-            if(checkHealth() < 0) {
-                enemies.remove(i);
-            }
             if(enemy.getX()>800.1f) {
                 enemies.remove(i);
             }
