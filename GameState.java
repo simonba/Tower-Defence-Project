@@ -18,7 +18,7 @@ public class GameState extends BasicGameState {
     private int counter = 0;
     private float x;
     private float y;
-    private float range = 25;
+    private float range = Math.abs(25);
     private int health = 10;
     private Random random;
 
@@ -38,14 +38,25 @@ public class GameState extends BasicGameState {
         health = health - 2;
     }
 
-    public void shoot() {
+    public void makeBullet() {
         for(Circle tower : towers) {
             x = tower.getCenterX();
             y = tower.getCenterY();
             towers.add(new Circle(x, y, 10));
         }
     }
-
+  
+    public void shootEnemies() {
+        for (Circle tower : towers) {
+            for (Circle enemy : enemies) {
+                if (tower.getCenterX() - enemy.getCenterX() <= range) {
+                    hitTargets();
+                } else if (tower.getCenterY() - enemy.getCenterY() <= range) {
+                    hitTargets();
+                }
+            }
+        }
+    }
 
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
@@ -90,7 +101,7 @@ public class GameState extends BasicGameState {
             bullet.setCenterX(centerX+(delta/5f));
           //  bullet.setCenterY(centerY+(delta/5f));
         }
-
+        withinRange();
     }
 
 
