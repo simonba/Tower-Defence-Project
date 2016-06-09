@@ -6,6 +6,7 @@ import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class GameState extends BasicGameState {
 
@@ -19,6 +20,7 @@ public class GameState extends BasicGameState {
     private float y;
     private float range = 25;
     private int health = 10;
+    private Random random;
 
 
 
@@ -40,9 +42,11 @@ public class GameState extends BasicGameState {
         for(Circle tower : towers) {
             x = tower.getCenterX();
             y = tower.getCenterY();
-            bullets.add(new Circle(x, y, 5));
+            towers.add(new Circle(x, y, 10));
         }
     }
+
+
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
@@ -60,12 +64,16 @@ public class GameState extends BasicGameState {
             towers.add(new Circle(x, y, 20));
         }
 
-        shoot();
+        for(Circle tower : towers) {
+            x = tower.getCenterX();
+            y = tower.getCenterY();
+        }
 
         time +=delta;
         if(time>200) {
             time = 0;
             enemies.add(new Circle(0, 300, 13));
+            bullets.add(new Circle(x, y, 5));
         }
 
         for(Circle enemy : enemies) {
@@ -74,6 +82,13 @@ public class GameState extends BasicGameState {
             if(enemy.getCenterX() >= 800f && enemy.getCenterX() <= 800.2f) {
                 counter++;
             }
+        }
+
+        for(Circle bullet : bullets) {
+            float centerX = bullet.getCenterX();
+            //float centerY = bullet.getCenterY();
+            bullet.setCenterX(centerX+(delta/5f));
+          //  bullet.setCenterY(centerY+(delta/5f));
         }
 
     }
