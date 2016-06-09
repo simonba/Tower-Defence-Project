@@ -9,8 +9,6 @@ import org.newdawn.slick.AppGameContainer;
 public class TowerDefence extends StateBasedGame {
 
     private Shape circle = null;
-//    private ArrayList<Enemy> enemies;
-
 
     public TowerDefence(String title) {
         super(title);
@@ -28,12 +26,6 @@ public class TowerDefence extends StateBasedGame {
 
 
     }
-
-//    public void enemyAnimation() {
-//        Animation enemyMove = new Animation();
-//       for (int i = 0; i < 50; i++) {
-//        }
-//    }
 
 
     public static void main (String[] args) throws SlickException {
