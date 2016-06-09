@@ -19,6 +19,7 @@ public class GameState extends BasicGameState {
     private int counter = 0;
     private float x;
     private float y;
+    private int a;
     private float range = 50;
     private int health = 10;
     private Random random;
@@ -81,14 +82,22 @@ public class GameState extends BasicGameState {
     }
 */
 
+
+
+
     public void withinRange() {
-        for (int j = towers.size() - 1; j >= 0; j-- ) {
+        for (int j = towers.size() - 1; j >= 0; j--) {
             Circle torn = towers.get(j);
             for (int i = enemies.size() - 1; i >= 0; i--) {
                 Circle fiende = enemies.get(i);
                 if (torn.getCenterX() - fiende.getCenterX() <= range && torn.getCenterX() - fiende.getCenterX() >= -range
                         && torn.getCenterY() - fiende.getCenterY() <= range && torn.getCenterY() - fiende.getCenterY() >= -range) {
-                    isInRange++;
+                    Random rdm = new Random();
+                    int b = rdm.nextInt(1000);
+                    if (b == 6) {
+                        isInRange++;
+                        enemies.remove(i);
+                    }
                 }
             }
         }
