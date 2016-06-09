@@ -58,6 +58,10 @@ public class GameState extends BasicGameState {
         }
     }
 
+    public boolean isAlive() {
+        return health > 0; 
+    }
+
 
     public void update(GameContainer gc, StateBasedGame state, int delta) throws SlickException {
 
